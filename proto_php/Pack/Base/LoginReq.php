@@ -41,6 +41,10 @@ class LoginReq extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string mac_id = 7;</code>
      */
     protected $mac_id = '';
+    /**
+     * Generated from protobuf field <code>repeated int32 login_num = 8;</code>
+     */
+    private $login_num;
 
     /**
      * Constructor.
@@ -55,6 +59,7 @@ class LoginReq extends \Google\Protobuf\Internal\Message
      *     @type string $version
      *     @type string $device_id
      *     @type string $mac_id
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $login_num
      * }
      */
     public function __construct($data = NULL) {
@@ -212,6 +217,28 @@ class LoginReq extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->mac_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int32 login_num = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLoginNum()
+    {
+        return $this->login_num;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int32 login_num = 8;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLoginNum($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
+        $this->login_num = $arr;
 
         return $this;
     }

@@ -21,9 +21,5 @@ message LoginReq{
     string version = 5;
     string device_id = 6;
     string mac_id = 7;
-}
-
-message LoginRsp{
-    int32 uid = 1;
-    LoginType login_type = 2;
+    repeated int32 login_num = 8;
 }
