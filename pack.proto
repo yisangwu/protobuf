@@ -1,0 +1,29 @@
+syntax = "proto3";
+package pack.base;
+
+enum LoginType{
+    GUEST = 0;
+    APPLE = 1;
+    RENREN = 2;
+    FACEBOOK = 3;
+    KAIXIN = 4;
+    GAMECENTER = 5;
+    SINA = 6;
+    WEICHAT = 7;
+    ALIPAY = 8;
+}
+
+message LoginReq{
+    string sig = 1;
+    LoginType login_type = 2;
+    string openid = 3;
+    string channel = 4;
+    string version = 5;
+    string device_id = 6;
+    string mac_id = 7;
+}
+
+message LoginRsp{
+    int32 uid = 1;
+    LoginType login_type = 2;
+}
